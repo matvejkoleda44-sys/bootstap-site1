@@ -1,0 +1,381 @@
+/* =========================================
+   Стили сайта «Операторы ветвления»
+   ========================================= */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26343b;
+    background: #f7fafb;
+}
+
+/* Навигация */
+
+.navbar {
+    background: #173042;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navbar-brand {
+    letter-spacing: 0.4px;
+}
+
+.nav-link {
+    color: #dce8ed !important;
+    margin-left: 8px;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #8ed6d0 !important;
+}
+
+/* Главный экран */
+
+.hero-section {
+    min-height: 540px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 85% 25%, rgba(142, 214, 208, 0.18), transparent 28%),
+        linear-gradient(135deg, #173042 0%, #24556a 55%, #367b83 100%);
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-content .badge {
+    display: inline-block;
+    padding: 9px 15px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #a9e6e0;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero-content .lead {
+    font-size: 1.6rem;
+    color: #e5f2f3;
+}
+
+.hero-text {
+    max-width: 720px;
+    color: #c7dce1;
+    font-size: 1.05rem;
+    margin: 20px 0 30px;
+}
+
+.hero-content .btn {
+    color: #173042;
+    border: none;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 12px 28px;
+}
+
+/* Секции */
+
+section {
+    scroll-margin-top: 72px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 800;
+    color: #173042;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    max-width: 820px;
+    text-align: center;
+    color: #66767d;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+.info-section {
+    background: #edf4f5;
+}
+
+/* Таблица */
+
+.table-responsive {
+    overflow: hidden;
+}
+
+.table {
+    background: white;
+}
+
+.table thead th {
+    background: #24556a;
+    color: white;
+    border: none;
+    padding: 16px;
+}
+
+.table tbody td {
+    padding: 15px;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+    background-color: #edf7f6;
+}
+
+.table code {
+    color: #277b78;
+}
+
+/* Accordion / Collapse */
+
+.accordion {
+    max-width: 950px;
+    margin: auto;
+}
+
+.accordion-item {
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(23, 48, 66, 0.07);
+}
+
+.accordion-button {
+    font-weight: 700;
+    color: #173042;
+    background: white;
+    padding: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #24556a;
+    background: #e2f2f0;
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: white;
+    line-height: 1.7;
+}
+
+pre {
+    background: #17242c;
+    color: #e7f4f5;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+pre code {
+    color: inherit;
+}
+
+/* Карточки */
+
+.type-card {
+    height: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #dce8ea;
+    box-shadow: 0 5px 18px rgba(23, 48, 66, 0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.type-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(23, 48, 66, 0.12);
+}
+
+.type-number {
+    color: #58a9a3;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.type-card h3 {
+    color: #173042;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.type-card p {
+    color: #687980;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.type-card code {
+    color: #277b78;
+    font-weight: 700;
+}
+
+/* Карусель */
+
+#operatorsCarousel {
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.slide-content {
+    min-height: 430px;
+    padding: 60px 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #24556a, #367b83);
+}
+
+.carousel-item:nth-child(2) .slide-content {
+    background: linear-gradient(135deg, #315b70, #4b8c91);
+}
+
+.carousel-item:nth-child(3) .slide-content {
+    background: linear-gradient(135deg, #27495d, #397f7b);
+}
+
+.slide-label {
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: #a9e6e0;
+    margin-bottom: 12px;
+}
+
+.slide-content h3 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #edf7f8;
+}
+
+.slide-content pre {
+    width: 100%;
+    max-width: 650px;
+    text-align: left;
+}
+
+/* Кнопка */
+
+.btn-accent {
+    background: #367b83;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.btn-accent:hover {
+    background: #24556a;
+    color: white;
+}
+
+/* Модальное окно */
+
+.modal-content {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background: #173042;
+    color: white;
+    border: none;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+.modal-body {
+    line-height: 1.7;
+    padding: 25px;
+}
+
+/* Подвал */
+
+footer {
+    background: #173042;
+    color: #dce8ed;
+    padding: 28px 0;
+}
+
+footer small {
+    color: #91aeb7;
+}
+
+/* Адаптация */
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 500px;
+        padding: 60px 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content .lead {
+        font-size: 1.3rem;
+    }
+
+    .slide-content {
+        min-height: 460px;
+        padding: 55px 17%;
+    }
+
+    .slide-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .slide-content pre {
+        font-size: 0.8rem;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+}

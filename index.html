@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Операторы ветвления</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Навигационная панель -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Операторы ветвления</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Открыть меню">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#theory">Теория</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#types">Виды</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#examples">Примеры</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Главный блок -->
+<header id="home" class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <span class="badge">PROGRAMMING • CONDITIONS • LOGIC</span>
+            <h1>Управляющие конструкции языка</h1>
+            <p class="lead">Операторы ветвления</p>
+            <p class="hero-text">
+                Учебный материал о конструкциях, которые позволяют программе
+                принимать решения и выбирать последовательность выполнения команд.
+            </p>
+            <a href="#theory" class="btn btn-light btn-lg">Изучить тему</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- Теория и таблица -->
+    <section id="theory" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Основные операторы</h2>
+            <p class="section-description">
+                Операторы ветвления используются для выполнения разных действий
+                в зависимости от результата проверки условия.
+            </p>
+
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-hover align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Конструкция</th>
+                            <th>Назначение</th>
+                            <th>Пример</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>if</strong></td>
+                            <td>Выполняет блок команд, если условие истинно.</td>
+                            <td><code>if (x &gt; 0)</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>if ... else</strong></td>
+                            <td>Позволяет выбрать один из двух вариантов.</td>
+                            <td><code>if (...) ... else ...</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>else if</strong></td>
+                            <td>Используется для последовательной проверки нескольких условий.</td>
+                            <td><code>else if (x == 0)</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>switch</strong></td>
+                            <td>Выбирает действие в зависимости от значения выражения.</td>
+                            <td><code>switch (number)</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Коллапс -->
+    <section class="py-5 info-section">
+        <div class="container">
+            <h2 class="section-title">Разбор конструкций</h2>
+
+            <div class="accordion" id="operatorsAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#ifOperator">
+                            Оператор if
+                        </button>
+                    </h2>
+                    <div id="ifOperator" class="accordion-collapse collapse show"
+                         data-bs-parent="#operatorsAccordion">
+                        <div class="accordion-body">
+                            <strong>if</strong> проверяет условие. Если результат
+                            проверки равен true, выполняется соответствующий блок команд.
+                            <pre><code>if (age &gt;= 18) {
+    console.log("Доступ разрешён");
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#elseOperator">
+                            Конструкция if ... else
+                        </button>
+                    </h2>
+                    <div id="elseOperator" class="accordion-collapse collapse"
+                         data-bs-parent="#operatorsAccordion">
+                        <div class="accordion-body">
+                            Конструкция <strong>if ... else</strong> позволяет
+                            выполнить один блок при истинном условии, а другой —
+                            при ложном.
+                            <pre><code>if (score &gt;= 60) {
+    console.log("Зачёт");
+} else {
+    console.log("Незачёт");
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#elseIfOperator">
+                            Конструкция else if
+                        </button>
+                    </h2>
+                    <div id="elseIfOperator" class="accordion-collapse collapse"
+                         data-bs-parent="#operatorsAccordion">
+                        <div class="accordion-body">
+                            <strong>else if</strong> применяется, когда необходимо
+                            проверить несколько условий последовательно.
+                            <pre><code>if (x &gt; 0) {
+    console.log("Положительное");
+} else if (x &lt; 0) {
+    console.log("Отрицательное");
+} else {
+    console.log("Ноль");
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#switchOperator">
+                            Оператор switch
+                        </button>
+                    </h2>
+                    <div id="switchOperator" class="accordion-collapse collapse"
+                         data-bs-parent="#operatorsAccordion">
+                        <div class="accordion-body">
+                            <strong>switch</strong> удобен, когда требуется
+                            выбрать один вариант из нескольких возможных значений.
+                            <pre><code>switch (day) {
+    case 1:
+        console.log("Понедельник");
+        break;
+    case 2:
+        console.log("Вторник");
+        break;
+    default:
+        console.log("Другой день");
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Виды -->
+    <section id="types" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Как работает ветвление</h2>
+            <p class="section-description">
+                Ветвление позволяет программе выбирать дальнейшее действие.
+                Благодаря этому один и тот же алгоритм может вести себя по-разному
+                в зависимости от входных данных.
+            </p>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="type-card">
+                        <div class="type-number">01</div>
+                        <h3>Одно условие</h3>
+                        <p>
+                            Проверяется одно условие. Команда выполняется
+                            только в том случае, если условие истинно.
+                        </p>
+                        <code>if (условие)</code>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="type-card">
+                        <div class="type-number">02</div>
+                        <h3>Два варианта</h3>
+                        <p>
+                            Программа выбирает один из двух путей:
+                            условие истинно или условие ложно.
+                        </p>
+                        <code>if ... else</code>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="type-card">
+                        <div class="type-number">03</div>
+                        <h3>Несколько вариантов</h3>
+                        <p>
+                            Можно последовательно проверить несколько условий
+                            или выбрать действие с помощью switch.
+                        </p>
+                        <code>else if / switch</code>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Карусель -->
+    <section id="examples" class="py-5 info-section">
+        <div class="container">
+            <h2 class="section-title">Примеры использования</h2>
+
+            <div id="operatorsCarousel" class="carousel slide shadow" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#operatorsCarousel"
+                            data-bs-slide-to="0" class="active"
+                            aria-current="true"></button>
+                    <button type="button" data-bs-target="#operatorsCarousel"
+                            data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#operatorsCarousel"
+                            data-bs-slide-to="2"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="slide-content">
+                            <span class="slide-label">01</span>
+                            <h3>Проверка возраста</h3>
+                            <p>Условие определяет, разрешено ли пользователю выполнить действие.</p>
+                            <pre><code>if (age &gt;= 18) {
+    console.log("Разрешено");
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="slide-content">
+                            <span class="slide-label">02</span>
+                            <h3>Проверка результата</h3>
+                            <p>С помощью if...else можно выбрать один из двух вариантов.</p>
+                            <pre><code>if (score &gt;= 60) {
+    console.log("Зачёт");
+} else {
+    console.log("Незачёт");
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="slide-content">
+                            <span class="slide-label">03</span>
+                            <h3>Выбор действия</h3>
+                            <p>Конструкция switch подходит для нескольких фиксированных вариантов.</p>
+                            <pre><code>switch (number) {
+    case 1:
+        console.log("Один");
+        break;
+    default:
+        console.log("Другое");
+}</code></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button"
+                        data-bs-target="#operatorsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Назад</span>
+                </button>
+
+                <button class="carousel-control-next" type="button"
+                        data-bs-target="#operatorsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Вперёд</span>
+                </button>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-accent btn-lg"
+                        data-bs-toggle="modal"
+                        data-bs-target="#definitionModal">
+                    Что такое ветвление?
+                </button>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Модальное окно -->
+<div class="modal fade" id="definitionModal" tabindex="-1"
+     aria-labelledby="definitionModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="definitionModalLabel">
+                    Операторы ветвления
+                </h5>
+                <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+
+            <div class="modal-body">
+                <h5>Что такое ветвление?</h5>
+                <p>
+                    Ветвление — это управляющая конструкция, которая позволяет
+                    программе выбрать дальнейший путь выполнения в зависимости
+                    от определённого условия.
+                </p>
+
+                <hr>
+
+                <p class="mb-0">
+                    <strong>Основные конструкции:</strong>
+                    if, if...else, else if и switch.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Закрыть</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Подвал -->
+<footer>
+    <div class="container text-center">
+        <p class="mb-1">Управляющие конструкции языка. Операторы ветвления</p>
+        <small>Учебный сайт на Bootstrap 5.3.8</small>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
