@@ -354,45 +354,101 @@
 </main>
 
 <!-- Модальное окно -->
-<div class="modal fade" id="definitionModal" tabindex="-1"
-     aria-labelledby="definitionModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered">
+ <div class="modal fade" id="definitionModal" tabindex="-1" aria-labelledby="definitionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-header">
-                <h5 class="modal-title" id="definitionModalLabel">
-                    Операторы ветвления
-                </h5>
-                <button type="button" class="btn-close"
-                        data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                <h2 class="modal-title" id="definitionModalLabel">Что такое ветвление?</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
             </div>
 
             <div class="modal-body">
-                <h5>Что такое ветвление?</h5>
+                <h4>Ветвление в программировании</h4>
                 <p>
-                    Ветвление — это управляющая конструкция, которая позволяет
-                    программе выбрать дальнейший путь выполнения в зависимости
-                    от определённого условия.
+                    <strong>Ветвление</strong> — это управляющая конструкция,
+                    которая позволяет программе выбирать дальнейший порядок
+                    выполнения команд в зависимости от определённого условия.
+                </p>
+                <p>
+                    Благодаря ветвлению программа может выполнять разные команды
+                    в разных ситуациях. Это позволяет алгоритму принимать решения
+                    и реагировать на входные данные.
                 </p>
 
                 <hr>
 
-                <p class="mb-0">
-                    <strong>Основные конструкции:</strong>
-                    if, if...else, else if и switch.
-                </p>
+                <h4>Основные виды ветвления</h4>
+                <div class="row g-3 mt-2">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">if</h5>
+                                <p class="card-text">
+                                    Проверяет условие и выполняет команду,
+                                    если условие истинно.
+                                </p>
+                                <code>if (x &gt; 0)</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">if ... else</h5>
+                                <p class="card-text">
+                                    Позволяет выбрать один из двух вариантов
+                                    выполнения программы.
+                                </p>
+                                <code>if (...) ... else ...</code>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">switch</h5>
+                                <p class="card-text">
+                                    Позволяет выбрать действие из нескольких
+                                    фиксированных вариантов.
+                                </p>
+                                <code>switch (x)</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h4>Как работает ветвление?</h4>
+                <ol>
+                    <li>Программа получает исходные данные.</li>
+                    <li>Проверяется заданное условие.</li>
+                    <li>Определяется результат проверки.</li>
+                    <li>Выбирается соответствующая ветвь программы.</li>
+                    <li>Выполняются команды выбранной ветви.</li>
+                </ol>
+
+                <div class="alert alert-info mt-4" role="alert">
+                    <strong>Главная идея:</strong>
+                    ветвление позволяет программе выбирать разные действия
+                    в зависимости от определённых условий.
+                </div>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary"
-                        data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                    Закрыть
+                </button>
             </div>
 
         </div>
     </div>
 </div>
 
+</div>
 <!-- Подвал -->
 <footer>
     <div class="container text-center">
